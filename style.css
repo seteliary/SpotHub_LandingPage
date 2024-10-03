@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #004aad;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+header {
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0 64px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+a {
+  color: #004aad;
+}
+
+#logo {
+  width: 160px;
+  user-select: none;
+}
+
+.container {
+  max-width: 1180px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.navigation ul li a {
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  /* transition: 1s ease-in; */
+}
+
+/* .navigation ul li a:hover {
+  border-bottom: 1px solid #fff;
+} */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-calling {
+  font-size: 56px;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-small-calling {
+  font-size: 24px;
+  padding: 8px 0 16px;
+}
+
+.hero-small-calling-impact {
+  font-weight: 500;
+}
+
+.hero-button {
+  width: 50%;
+  padding: 10px 8px;
+  background-color: #ffffff52;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 32px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.navigation li .login-button:hover {
+  box-shadow: rgba(255, 255, 255, 0.377) 0px 8px 32px;
+}
+
+.hero-image {
+  width: 300px;
+}
+
+.hero-text {
+  width: 33%;
+  text-align: right;
+  font-size: 16px;
+}
+
+.hero-text p {
+  margin-top: 12px;
+}
+
+/* Seção "Como funciona?" e "Primeiros passos" */
+
+.cards {
+  background-color: #fff;
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 0 64px;
+  background-image: url(images/waves.png);
+  background-repeat: repeat-x;
+  background-size: 900px;
+  background-position: center;
+}
+
+.cards h2 {
+  color: #004aad;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cards .container {
+  display: flex;
+  gap: 72px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cards img {
+  width: 100%;
+}
+
+/* Rodapé */
+
+footer {
+  color: #004aad;
+  text-align: center;
+  padding: 48px 0;
+}
+
+/* color: #36454f; */
+
+/* Seção "Por que escolher o SpotHub" */
+
+.section-group {
+  width: 100%;
+  background: rgb(0, 74, 173);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 74, 173, 1) 0%,
+    rgba(41, 103, 186, 1) 65%,
+    rgba(255, 255, 255, 0.9) 100%
+  );
+}
+
+.section-group img {
+  height: 100%;
+}
+
+.why-choose-us,
+.what-are-irs,
+#contact-us {
+  padding: 56px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose-us .container,
+.what-are-irs .container,
+#contact-us .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.why-choose-us .container p,
+.what-are-irs .container p {
+  line-height: 28px;
+}
+
+.why-choose-us .container img,
+.what-are-irs .container img {
+  height: 100%;
+  transform: scaleX(-1);
+}
+
+.why-choose-us {
+  padding-bottom: 0;
+}
+
+.why-choose-us .container img {
+  width: 150px;
+}
+
+.what-are-irs .container {
+  text-align: right;
+}
+
+.what-are-irs .container img {
+  width: 220px;
+}
+
+#contact-us .container {
+  background-color: #fff;
+  padding: 40px;
+  color: #004aad;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 32px;
+}
+
+#contact-us img {
+  width: 265px;
+}
+
+#contact-us a {
+  font-weight: 500;
+}
+
+.navigation li .login-button {
+  background-color: #ffffff52;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 32px;
+  transition: 0.4s ease-in-out;
+}
