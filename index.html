@@ -26,6 +26,11 @@
           <li><a href="" class="login-button">Login</a></li>
         </ul>
       </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </header>
 
@@ -111,6 +116,16 @@
 
     </footer>
   </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navigation = document.querySelector('.navigation');
+
+    hamburger.addEventListener('click', () => {
+      navigation.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
 
 </body>
 
