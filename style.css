@@ -18,6 +18,7 @@ body {
   background-color: #004aad;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  position: relative;
 }
 
 header {
@@ -26,13 +27,26 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 40px 0 64px;
+  margin: 40px 0 0;
+}
+
+main,
+.teste {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 0;
 }
 
 h2 {
   font-weight: 400;
   font-size: 40px;
   margin-bottom: 24px;
+}
+
+h3 {
+  font-weight: 600;
 }
 
 p {
@@ -48,7 +62,7 @@ nav {
 }
 
 #logo {
-  width: 160px;
+  width: 165px;
   user-select: none;
 }
 
@@ -152,14 +166,13 @@ nav {
 .cards {
   background-color: #fff;
   width: 100%;
-  margin-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 56px 0 64px;
   background-image: url(images/waves.png);
   background-repeat: repeat-x;
-  background-size: 900px;
+  background-size: 600px;
   background-position: center;
 }
 
@@ -172,13 +185,17 @@ nav {
 
 .cards .container {
   display: flex;
-  gap: 72px;
+  gap: 88px;
   align-items: flex-start;
   justify-content: space-between;
 }
 
 .cards img {
   width: 100%;
+}
+
+.cards #how-it-works img {
+  width: 550px;
 }
 
 /* Rodapé */
@@ -188,8 +205,6 @@ footer {
   text-align: center;
   padding: 48px 0;
 }
-
-/* color: #36454f; */
 
 /* Seção "Por que escolher o SpotHub" */
 
@@ -208,7 +223,7 @@ footer {
   height: 100%;
 }
 
-.why-choose-us,
+.reasons-to-choose-us,
 .what-are-irs,
 #contact-us {
   padding: 56px 0;
@@ -217,7 +232,7 @@ footer {
   justify-content: center;
 }
 
-.why-choose-us .container,
+.reasons-to-choose-us .container,
 .what-are-irs .container,
 #contact-us .container {
   width: 100%;
@@ -226,23 +241,13 @@ footer {
   gap: 80px;
 }
 
-.why-choose-us .container p,
-.what-are-irs .container p {
+p:not(.hero-text p) {
   line-height: 28px;
 }
 
-.why-choose-us .container img,
 .what-are-irs .container img {
   height: 100%;
   transform: scaleX(-1);
-}
-
-.why-choose-us {
-  padding-bottom: 0;
-}
-
-.why-choose-us .container img {
-  width: 150px;
 }
 
 .what-are-irs .container {
@@ -260,7 +265,7 @@ footer {
   display: flex;
   align-items: center;
   border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 32px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #contact-us img {
@@ -298,7 +303,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 100%;
   }
 
   .hero {
@@ -343,12 +348,12 @@ footer {
   }
 
   .what-are-irs,
-  .why-choose-us {
+  .reasons-to-choose-us {
     padding: 42px 0 0;
   }
 
   .what-are-irs .container,
-  .why-choose-us .container,
+  .reasons-to-choose-us .container,
   #contact-us .container {
     flex-direction: column;
     width: 80%;
@@ -358,12 +363,12 @@ footer {
   }
 
   .what-are-irs .container h2,
-  .why-choose-us .container h2 {
+  .reasons-to-choose-us .container h2 {
     width: 85%;
   }
 
   .what-are-irs .container img,
-  .why-choose-us .container img {
+  .reasons-to-choose-us .container img {
     position: absolute;
   }
 
@@ -375,7 +380,7 @@ footer {
     transform: scaleX(1);
   }
 
-  .why-choose-us .container img {
+  .reasons-to-choose-us .container img {
     width: 55px;
     height: 88px;
     right: 0;
@@ -406,7 +411,7 @@ footer {
     top: 24px;
   }
 
-  .why-choose-us .container img {
+  .reasons-to-choose-us .container img {
     top: -8px;
   }
 
@@ -424,7 +429,7 @@ footer {
     right: 112px;
   }
 
-  .why-choose-us .container img {
+  .reasons-to-choose-us .container img {
     top: -40px;
     right: 88px;
   }
@@ -528,4 +533,241 @@ footer {
     color: #fff;
     background-color: #004bad;
   }
+}
+
+.main-features,
+.profiles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 56px 0;
+}
+
+.main-features {
+  background-color: #004aad;
+  color: #fff;
+  background-image: url(images/waves.png);
+  background-repeat: repeat-x;
+  background-size: 600px;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 72px;
+}
+
+.main-features h2 {
+  /* text-align: center;
+  background-color: #fff;
+  color: #004aad;
+  margin: 16px 0 160px;
+  border-radius: 999px;
+  padding: 8px; */
+
+  margin: 16px 0 160px;
+  border-bottom: 3px solid #fff;
+  padding: 0 0 16px 16px;
+}
+
+.feature-cards {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.feature-card {
+  width: 271px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background-color: #fff;
+  color: #004aad;
+  padding: 64px 24px 24px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+
+.feature-card img {
+  position: absolute;
+}
+
+.feature-card .flying-robot {
+  width: 75px;
+  top: -75px;
+  right: 34%;
+}
+
+.feature-card .devices {
+  width: 49%;
+  top: -64px;
+  right: 21%;
+}
+
+.feature-card .apis {
+  width: 50%;
+  top: -64px;
+  right: 25%;
+}
+
+.feature-card .opec {
+  width: 52%;
+  top: -56px;
+  right: 23%;
+}
+
+.feature-card div h3 {
+  margin-bottom: 8px;
+}
+
+.who-will-benefit-from-this {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.profiles {
+  background-color: #fff;
+  color: #004aad;
+}
+
+.profiles h2 {
+  text-align: center;
+}
+
+.profile-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.profile-card {
+  background-color: #004aad;
+  color: #fff;
+  margin: 8px 0;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+
+.profile-card-content {
+  padding: 24px;
+}
+
+.profile-card-content h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.profile-card-content p {
+  font-size: 16px;
+}
+
+.profile-card img {
+  float: left;
+  width: 170px;
+  height: 170px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 24px;
+}
+
+.whatsapp-logo {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #31ba45;
+  padding: 12px 12px 8px 12px;
+  border-radius: 50%;
+  animation: shake-animation 9s infinite;
+}
+
+.whatsapp-logo img {
+  width: 35px;
+}
+
+@keyframes shake-animation {
+  0%,
+  22.22% {
+    transform: translateY(0); /* Ponto inicial e final da animação */
+  }
+  5%,
+  15% {
+    transform: translateY(-6px); /* Movimenta rapidamente para a esquerda */
+  }
+  10%,
+  20% {
+    transform: translateY(6px); /* Movimenta rapidamente para a direita */
+  }
+}
+
+/* Seção "7 motivos para escolher o SpotHub" */
+
+.reasons-to-choose-us {
+  padding: 0;
+}
+
+.reasons-to-choose-us .container img {
+  width: 80px;
+  padding: 48px 0;
+  margin-left: 32px;
+}
+
+.reasons-to-choose-us .title-with-image {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  gap: 32px;
+}
+
+.reasons-to-choose-us h2 {
+  margin-top: 16px;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 16px;
+}
+
+.reasons-to-choose-us .reasons-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 48px;
+  background-color: #fff;
+  color: #004bad;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.reasons-list li .list-item-title {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #004aad;
+  color: #fff;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.step-number span {
+  font-size: 18px;
+  font-weight: bold;
 }
