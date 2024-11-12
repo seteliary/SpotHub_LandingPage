@@ -518,6 +518,86 @@ p:not(.hero-text p) {
   font-weight: bold;
 }
 
+@media (min-width: 320px) and (max-width: 374px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .menu {
+    margin-left: 32px;
+  }
+
+  .hero,
+  .feature-cards,
+  .cards .container,
+  .what-are-irs .container,
+  #contact-us .container {
+    flex-direction: column;
+  }
+
+  .feature-cards,
+  .cards .container,
+  .what-are-irs .container {
+    align-items: center;
+  }
+
+  .hero-image {
+    width: 250px;
+  }
+
+  .hero-text {
+    width: 80%;
+    text-align: left;
+  }
+
+  .hero-calling {
+    font-size: 48px;
+  }
+
+  .container {
+    max-width: 360px;
+  }
+
+  .main-features h2 {
+    margin: 16px 32px 160px;
+  }
+
+  .feature-cards {
+    gap: 120px;
+  }
+
+  .profile-card-content h3 {
+    font-size: 18px;
+  }
+
+  .cards .container #profiles {
+    padding: 0 40px;
+  }
+
+  .profile-card img {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .cards #how-it-works img {
+    width: 350px;
+    margin-left: 8px;
+  }
+
+  .what-are-irs .container,
+  #contact-us,
+  .reasons-to-choose-us .container {
+    padding: 0 32px;
+  }
+
+  #contact-us img,
+  .what-are-irs .container img {
+    width: 165px;
+  }
+}
+
 @media (min-width: 375px) and (max-width: 992px) {
   header .container,
   .main-features .container,

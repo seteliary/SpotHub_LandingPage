@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -537,86 +538,6 @@
       font-weight: bold;
     }
 
-    @media (min-width: 320px) and (max-width: 374px) {
-      h2 {
-        font-size: 28px;
-      }
-
-      .menu {
-        margin-left: 32px;
-      }
-
-      .hero,
-      .feature-cards,
-      .cards .container,
-      .what-are-irs .container,
-      #contact-us .container {
-        flex-direction: column;
-      }
-
-      .feature-cards,
-      .cards .container,
-      .what-are-irs .container {
-        align-items: center;
-      }
-
-      .hero-image {
-        width: 250px;
-      }
-
-      .hero-text {
-        width: 80%;
-        text-align: left;
-      }
-
-      .hero-calling {
-        font-size: 48px;
-      }
-
-      .container {
-        max-width: 360px;
-      }
-
-      .main-features h2 {
-        margin: 16px 32px 160px;
-      }
-
-      .feature-cards {
-        gap: 120px;
-      }
-
-      .profile-card-content h3 {
-        font-size: 18px;
-      }
-
-      .cards .container #profiles {
-        padding: 0 40px;
-      }
-
-      .profile-card img {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-        margin-bottom: 8px;
-      }
-
-      .cards #how-it-works img {
-        width: 350px;
-        margin-left: 8px;
-      }
-
-      .what-are-irs .container,
-      #contact-us,
-      .reasons-to-choose-us .container {
-        padding: 0 32px;
-      }
-
-      #contact-us img,
-      .what-are-irs .container img {
-        width: 165px;
-      }
-    }
-
     @media (min-width: 375px) and (max-width: 992px) {
 
       header .container,
@@ -991,7 +912,7 @@
 <body>
   <header>
     <div class="container menu">
-      <img src="images/logo.png" alt="Logo SpotHub" id="logo" />
+      <img src="../images/logo.png" alt="Logo SpotHub" id="logo" />
       <nav class="navigation">
         <ul>
           <li><a href="#how-it-works">Como funciona?</a></li>
@@ -1016,7 +937,7 @@
         <span>Resultados</span>
         <span class="hero-small-calling">Isso é <span class="hero-small-calling-impact">SpotHub</span></span>
       </section>
-      <img src="images/bot.png" alt="Ilustração" class="hero-image">
+      <img src="../images/bot.png" alt="Ilustração" class="hero-image">
       <section class="hero-text">
         <h2>O que é SpotHub?</h2>
         <p>O SpotHub é uma plataforma projetada para transformar a forma como agências de publicidade e veículos de
@@ -1037,7 +958,7 @@
       <h2>O que oferecemos</h2>
       <div class="feature-cards">
         <div class="feature-card">
-          <img src="images/bot-flying.png" alt="Automação" class="flying-robot">
+          <img src="../images/bot-flying.png" alt="Automação" class="flying-robot">
           <div>
             <h3>Automação Completa do Processo</h3>
             <p>Do recebimento à veiculação, o SpotHub automatiza todas as etapas, acelerando a operação e garantindo
@@ -1045,7 +966,7 @@
           </div>
         </div>
         <div class="feature-card">
-          <img src="images/devices.png" alt="Dispositivos" class="devices">
+          <img src="../images/devices.png" alt="Dispositivos" class="devices">
           <div>
             <h3>Painel Web Intuitivo</h3>
             <p>Acesse todas as funcionalidades do SpotHub diretamente no navegador. Gerencie pedidos de inserção (PIs),
@@ -1055,7 +976,7 @@
           </div>
         </div>
         <div class="feature-card">
-          <img src="images/api.png" alt="APIs" class="apis">
+          <img src="../images/api.png" alt="APIs" class="apis">
           <div>
             <h3>Integração Fácil via REST API</h3>
             <p>Para veículos e agências que desejam uma integração ainda mais profunda, o SpotHub oferece uma API
@@ -1065,7 +986,7 @@
           </div>
         </div>
         <div class="feature-card">
-          <img src="images/opec.png" alt="OPEC" class="opec">
+          <img src="../images/opec.png" alt="OPEC" class="opec">
           <div>
             <h3>Conectividade com Sistemas de OPEC</h3>
             <p>Total compatibilidade com os principais softwares de cabine e plataformas de mídia, integrando de forma
@@ -1083,7 +1004,7 @@
         <div class="profile-cards">
           <div class="profile-card">
             <div class="profile-card-content">
-              <img src="images/agency2.jpg" alt="Agência de publicidade">
+              <img src="../images/agency2.jpg" alt="Agência de publicidade">
               <h3>Agências de Publicidade</h3>
               <p>Envie pedidos de inserção de mídia para múltiplos veículos com apenas alguns cliques: o
                 SpotHub permite que sua equipe foque na criação e planejamento, acelerando resultados. Deixe o trabalho
@@ -1093,7 +1014,7 @@
           </div>
           <div class="profile-card">
             <div class="profile-card-content">
-              <img src="images/media2.jpg" alt="Veículos midiáticos">
+              <img src="../images/media2.jpg" alt="Veículos midiáticos">
               <h3>Veículos de Mídia</h3>
               <p>Rádios, TVs, jornais e plataformas digitais se beneficiam com a integração automatizada de pedidos
                 de inserção nos mais diversos softwares utilizados por elas. O SpotHub facilita o recebimento, a
@@ -1109,7 +1030,7 @@
       </div>
       <div id="how-it-works">
         <h2>Entenda o fluxo</h2>
-        <img src="images/how-it-works.png" alt="Fluxo" />
+        <img src="../images/how-it-works.png" alt="Fluxo" />
       </div>
     </section>
   </div>
@@ -1118,7 +1039,7 @@
     <section class="container">
       <div>
         <div class="title-with-image">
-          <img src="images/bot2.png" alt="Mascote SpotHub">
+          <img src="../images/bot2.png" alt="Mascote SpotHub">
           <h2>7 motivos para escolher o SpotHub</h2>
         </div>
         <ol class="reasons-list">
@@ -1180,7 +1101,7 @@
   <div class="section-group">
     <div class="what-are-irs">
       <section class="container">
-        <img src="images/bot3.png" alt="Mascote SpotHub">
+        <img src="../images/bot3.png" alt="Mascote SpotHub">
         <div>
           <h2>O que são PIs (Pedidos de Inserção)?</h2>
           <p>Um Pedido de Inserção (PI) é um documento de solicitação formal enviado por uma agência de publicidade para
@@ -1204,7 +1125,7 @@
             para ser diretamente levado à uma conversa com nossos profissionais.
           </p>
         </div>
-        <img src="images/bot4.png" alt="Mascote SpotHub">
+        <img src="../images/bot4.png" alt="Mascote SpotHub">
       </section>
     </div>
 
@@ -1215,7 +1136,7 @@
   </div>
 
   <a href="https://wa.me/+5511933461305/?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20SpotHub." target="_blank"
-    class="whatsapp-logo"><img src="images/whatsapp.png" alt="Fale conosco!"></a>
+    class="whatsapp-logo"><img src="../images/whatsapp.png" alt="Fale conosco!"></a>
 
   <script>
     const hamburger = document.getElementById('hamburger');
