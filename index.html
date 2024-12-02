@@ -295,7 +295,8 @@
     }
 
     .main-features,
-    .profiles {
+    .profiles,
+    .our-panel {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -326,6 +327,25 @@
       margin: 16px 0 160px;
       border-bottom: 3px solid #fff;
       padding: 0 0 16px 16px;
+    }
+
+    .our-panel {
+      background-color: #fff;
+      color: #004aad;
+      background-image: url(images/waves.png);
+      background-repeat: repeat-x;
+      background-size: 600px;
+      background-position: center;
+    }
+
+    .our-panel h2 {
+      margin: 16px 0 40px;
+      border-bottom: 3px solid #004aad;
+      padding: 0 0 16px 16px;
+    }
+
+    .our-panel p {
+      margin-bottom: 40px;
     }
 
     .feature-cards {
@@ -475,6 +495,16 @@
         transform: translateY(6px);
         /* Movimenta rapidamente para a direita */
       }
+    }
+
+    .image-card {
+      background-color: #004aad;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .image-card img {
+      border-radius: 8px;
     }
 
     /* Seção "7 motivos para escolher o SpotHub" */
@@ -1076,6 +1106,16 @@
           </div>
         </div>
       </div>
+    </section>
+  </div>
+
+  <div class="our-panel">
+    <section class="container">
+      <h2>Nosso painel intuitivo</h2>
+      <p>Conheça um pouco da nossa interface: simples e intuitiva, mas completa. Todas as informações que você precisa
+        estão concentradas em um só lugar. Gerencie suas campanhas, acompanhe os status e realize todo o fluxo
+        necessário através de uma única plataforma: simplifique com o SpotHub.</p>
+      <div class="image-card"><img src="images/demo.png" alt="Demonstração" width="100%"></div>
     </section>
   </div>
 
