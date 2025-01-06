@@ -1277,6 +1277,26 @@
     class="whatsapp-logo"><img src="images/whatsapp.png" alt="Fale conosco!"></a>
 
   <script>
+    // Espera o carregamento completo da página
+    window.onload = function () {
+      // Pega o botão pelo nome da classe
+      var button = document.querySelector('.login-button');
+
+      // Pega a URL atual da página
+      var currentUrl = window.location.href;
+
+      // Define a ação de clique para o botão, baseado na URL atual
+      button.onclick = function () {
+        if (currentUrl === "https://hom.spothub.com.br/index.html") {
+          // Redireciona para a URL específica para hom.spothub.com.br
+          window.location.href = "https://hom.spothub.com.br/login.aspx";
+        } else if (currentUrl === "https://spothub.com.br/index.html") {
+          // Redireciona para a URL específica para spothub.com.br
+          window.location.href = "https://spothub.com.br/login.aspx";
+        }
+      };
+    };
+
     const hamburger = document.getElementById('hamburger');
     const navigation = document.querySelector('.navigation');
 
