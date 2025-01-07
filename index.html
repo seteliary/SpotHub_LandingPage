@@ -1042,7 +1042,7 @@
           <li><a href="#how-it-works">Como funciona?</a></li>
           <li><a href="#reasons">Motivos para nos escolher</a></li>
           <li><a href="#contact-us">Contato</a></li>
-          <li><a href="https://spothub.com.br/login.aspx" class="login-button">Login</a></li>
+          <li><a href="#" class="login-button">Login</a></li>
         </ul>
       </nav>
       <div class="hamburger" id="hamburger">
@@ -1277,25 +1277,25 @@
     class="whatsapp-logo"><img src="images/whatsapp.png" alt="Fale conosco!"></a>
 
   <script>
-    // Espera o carregamento completo da página
-    window.onload = function () {
-      // Pega o botão pelo nome da classe
-      var button = document.querySelector('.login-button');
+    // Espera o carregamento do conteúdo
+    document.addEventListener('DOMContentLoaded', function () {
+      // Seleciona o botão
+      const loginButton = document.querySelector('.login-button');
 
-      // Pega a URL atual da página
-      var currentUrl = window.location.href;
+      // Adiciona o ouvinte de evento de clique no botão
+      loginButton.addEventListener('click', function () {
+        // Verifica a URL atual
+        const currentUrl = window.location.href;
 
-      // Define a ação de clique para o botão, baseado na URL atual
-      button.onclick = function () {
-        if (currentUrl === "https://hom.spothub.com.br/index.html") {
-          // Redireciona para a URL específica para hom.spothub.com.br
+        // Se a URL contiver "hom", redireciona para o URL "hom.spothub"
+        if (currentUrl.includes("hom")) {
           window.location.href = "https://hom.spothub.com.br/login.aspx";
-        } else if (currentUrl === "https://spothub.com.br/index.html") {
-          // Redireciona para a URL específica para spothub.com.br
+        } else {
+          // Caso contrário, redireciona para o URL padrão
           window.location.href = "https://spothub.com.br/login.aspx";
         }
-      };
-    };
+      });
+    });
 
     const hamburger = document.getElementById('hamburger');
     const navigation = document.querySelector('.navigation');
