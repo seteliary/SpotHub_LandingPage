@@ -93,21 +93,21 @@
       width: 100%;
     }
 
-    .navigation ul {
+    .navegacao ul {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 32px;
     }
 
-    .navigation ul li a {
+    .navegacao ul li a {
       color: #fff;
       text-transform: uppercase;
       position: relative;
       padding-bottom: 8px;
     }
 
-    .navigation ul li:not(:last-child) a::after {
+    .navegacao ul li:not(:last-child) a::after {
       content: "";
       position: absolute;
       width: 0;
@@ -118,7 +118,7 @@
       transition: 0.4s ease-in-out;
     }
 
-    .navigation ul li a:hover::after {
+    .navegacao ul li a:hover::after {
       width: 100%;
     }
 
@@ -129,7 +129,7 @@
       gap: 56px;
     }
 
-    .hero-calling {
+    .hero-slogan {
       font-size: 56px;
       font-weight: 200;
       display: flex;
@@ -137,12 +137,12 @@
       gap: 8px;
     }
 
-    .hero-small-calling {
+    .hero-slogan-pequeno {
       font-size: 24px;
       padding: 8px 0 16px;
     }
 
-    .hero-small-calling-impact {
+    .hero-slogan-impacto {
       font-weight: 500;
     }
 
@@ -159,21 +159,21 @@
       transition: 0.4s ease-in-out;
     }
 
-    .navigation li .login-button:hover {
+    .navegacao li .botao-login:hover {
       box-shadow: rgba(255, 255, 255, 0.377) 0px 8px 32px;
     }
 
-    .hero-image {
+    .hero-mascote {
       width: 300px;
     }
 
-    .hero-text {
+    .hero-texto {
       width: 33%;
       text-align: right;
       font-size: 16px;
     }
 
-    .hero-text p {
+    .hero-texto p {
       margin-top: 12px;
     }
 
@@ -251,7 +251,7 @@
       gap: 80px;
     }
 
-    p:not(.hero-text p) {
+    p:not(.hero-texto p) {
       line-height: 28px;
     }
 
@@ -286,7 +286,7 @@
       font-weight: 500;
     }
 
-    .navigation li .login-button {
+    .navegacao li .botao-login {
       background-color: #ffffff52;
       padding: 8px 12px;
       border-radius: 8px;
@@ -515,14 +515,14 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-    .reasons-list li .list-item-title {
+    .reasons-list li .titulo-item-lista {
       display: block;
       font-weight: 500;
       font-size: 24px;
       margin-bottom: 4px;
     }
 
-    .step-number {
+    .passo {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -533,7 +533,7 @@
       border-radius: 50%;
     }
 
-    .step-number span {
+    .passo span {
       font-size: 18px;
       font-weight: bold;
     }
@@ -572,15 +572,15 @@
         flex-direction: column;
       }
 
-      .hero-calling {
+      .hero-slogan {
         text-align: center;
       }
 
-      .hero-image {
+      .hero-mascote {
         width: 250px;
       }
 
-      .hero-text {
+      .hero-texto {
         width: 80%;
         text-align: left;
       }
@@ -616,7 +616,7 @@
         margin-bottom: 16px;
       }
 
-      .step-number {
+      .passo {
         float: left;
         margin-right: 16px;
       }
@@ -705,7 +705,7 @@
         gap: 112px;
       }
 
-      .reasons-list li .list-item-title {
+      .reasons-list li .titulo-item-lista {
         font-size: 18px;
       }
 
@@ -802,7 +802,7 @@
 
     /* Menu hambúrguer */
 
-    .hamburger {
+    .hamburguer {
       display: none;
       flex-direction: column;
       justify-content: space-between;
@@ -820,7 +820,7 @@
     }
 
     /* Estilos das barras do hambúrguer */
-    .hamburger span {
+    .hamburguer span {
       display: block;
       height: 3px;
       background-color: white;
@@ -830,7 +830,7 @@
 
     /* Menu hambúrguer em resoluções menores */
     @media (max-width: 768px) {
-      .navigation {
+      .navegacao {
         position: fixed;
         top: 0;
         right: -100%;
@@ -847,12 +847,12 @@
           rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
 
-      .navigation ul {
+      .navegacao ul {
         flex-direction: column;
         gap: 24px;
       }
 
-      .navigation.active {
+      .navegacao.active {
         right: 0;
       }
 
@@ -860,11 +860,11 @@
         justify-content: space-between;
       }
 
-      .hamburger {
+      .hamburguer {
         display: flex;
       }
 
-      .hamburger.open {
+      .hamburguer.open {
         position: fixed;
         /* Fixa o X no topo da página quando o menu está aberto */
         top: 59px;
@@ -873,34 +873,34 @@
         /* Ajuste conforme necessário */
       }
 
-      .hamburger.open span {
+      .hamburguer.open span {
         background-color: #004aad;
       }
 
       /* Animação do ícone de hambúrguer */
-      .hamburger.open span:nth-child(1) {
+      .hamburguer.open span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
       }
 
-      .hamburger.open span:nth-child(2) {
+      .hamburguer.open span:nth-child(2) {
         opacity: 0;
       }
 
-      .hamburger.open span:nth-child(3) {
+      .hamburguer.open span:nth-child(3) {
         transform: translateY(-12px) rotate(-45deg);
       }
 
-      .navigation ul {
+      .navegacao ul {
         margin-top: 130px;
       }
 
-      .navigation ul li a {
+      .navegacao ul li a {
         font-size: 18px;
         padding: 8px 0;
         color: #004aad;
       }
 
-      .navigation ul li a.login-button {
+      .navegacao ul li a.botao-login {
         margin-top: 32px;
         color: #fff;
         background-color: #004bad;
@@ -913,15 +913,15 @@
   <header>
     <div class="container menu">
       <img src="../images/logo.png" alt="Logo SpotHub" id="logo" />
-      <nav class="navigation">
+      <nav class="navegacao">
         <ul>
           <li><a href="#how-it-works">Como funciona?</a></li>
           <li><a href="#reasons">Motivos para nos escolher</a></li>
           <li><a href="#contact-us">Contato</a></li>
-          <li><a href="https://spothub.com.br/login.aspx" class="login-button">Login</a></li>
+          <li><a href="https://spothub.com.br/login.aspx" class="botao-login">Login</a></li>
         </ul>
       </nav>
-      <div class="hamburger" id="hamburger">
+      <div class="hamburguer" id="hamburguer">
         <span></span>
         <span></span>
         <span></span>
@@ -931,14 +931,14 @@
 
   <main>
     <div class="hero container">
-      <section class="hero-calling">
+      <section class="hero-slogan">
         <span>Agilidade</span>
         <span>Automação</span>
         <span>Resultados</span>
-        <span class="hero-small-calling">Isso é <span class="hero-small-calling-impact">SpotHub</span></span>
+        <span class="hero-slogan-pequeno">Isso é <span class="hero-slogan-impacto">SpotHub</span></span>
       </section>
-      <img src="../images/bot.png" alt="Ilustração" class="hero-image">
-      <section class="hero-text">
+      <img src="../images/bot.png" alt="Ilustração" class="hero-mascote">
+      <section class="hero-texto">
         <h2>O que é SpotHub?</h2>
         <p>O SpotHub é uma plataforma projetada para transformar a forma como agências de publicidade e veículos de
           comunicação operam juntos, funcionando como um intermediário facilitador.</p>
@@ -1044,9 +1044,9 @@
         </div>
         <ol class="reasons-list">
           <li>
-            <div class="step-number"><span>1</span></div>
+            <div class="passo"><span>1</span></div>
             <p>
-              <span class="list-item-title">Eliminação de Processos Manuais</span> Diga adeus aos e-mails
+              <span class="titulo-item-lista">Eliminação de Processos Manuais</span> Diga adeus aos e-mails
               intermináveis para aprovação e
               programação de
               veiculações.
@@ -1054,41 +1054,44 @@
             </p>
           </li>
           <li>
-            <div class="step-number"><span>2</span></div>
-            <p><span class="list-item-title">Mais Precisão</span> Elimine erros e garanta que tudo saia conforme o
+            <div class="passo"><span>2</span></div>
+            <p><span class="titulo-item-lista">Mais Precisão</span> Elimine erros e garanta que tudo saia conforme o
               planejado,
               sempre com as informações corretas. Nossa IA é expert em precisão.</p>
           </li>
           <li>
-            <div class="step-number"><span>3</span></div>
+            <div class="passo"><span>3</span></div>
             <p>
-              <span class="list-item-title">Escalabilidade e Flexibilidade</span> O SpotHub se adapta à sua operação,
+              <span class="titulo-item-lista">Escalabilidade e Flexibilidade</span> O SpotHub se adapta à sua operação,
               seja pequena ou grande, integrando
               facilmente ao seu sistema.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>4</span></div>
-            <p><span class="list-item-title">Monitoramento em Tempo Real</span> Acompanhe todo o processo de veiculação
+            <div class="passo"><span>4</span></div>
+            <p><span class="titulo-item-lista">Monitoramento em Tempo Real</span> Acompanhe todo o processo de
+              veiculação
               com relatórios e dashboards em tempo
               real. Seja avisado por e-mail sobre cada etapa.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>5</span></div>
-            <p><span class="list-item-title">Integração Rápida</span> Implementação simples, com suporte dedicado para
+            <div class="passo"><span>5</span></div>
+            <p><span class="titulo-item-lista">Integração Rápida</span> Implementação simples, com suporte dedicado para
               todos os tamanhos de agência.</p>
           </li>
           <li>
-            <div class="step-number"><span>6</span></div>
-            <p><span class="list-item-title">Suporte a Multiplataformas</span> Conecte-se a rádios, TVs, jornais, sites
+            <div class="passo"><span>6</span></div>
+            <p><span class="titulo-item-lista">Suporte a Multiplataformas</span> Conecte-se a rádios, TVs, jornais,
+              sites
               e outras mídias em uma única
               plataforma.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>7</span></div>
-            <p><span class="list-item-title">Segurança</span> Dados estão protegidos com criptografia de ponta a ponta,
+            <div class="passo"><span>7</span></div>
+            <p><span class="titulo-item-lista">Segurança</span> Dados estão protegidos com criptografia de ponta a
+              ponta,
               seguindo os mais altos padrões do
               setor.
             </p>
@@ -1139,12 +1142,12 @@
     class="whatsapp-logo"><img src="../images/whatsapp.png" alt="Fale conosco!"></a>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navigation = document.querySelector('.navigation');
+    const hamburguer = document.getElementById('hamburguer');
+    const navegacao = document.querySelector('.navegacao');
 
-    hamburger.addEventListener('click', () => {
-      navigation.classList.toggle('active');
-      hamburger.classList.toggle('open');
+    hamburguer.addEventListener('click', () => {
+      navegacao.classList.toggle('active');
+      hamburguer.classList.toggle('open');
     });
   </script>
 

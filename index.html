@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <!-- Images by Freepik - https://www.freepik.com/ -->
-  <title>SpotHub - Automação e Integração Completa para Agências e Veículos de Mídia</title>
+  <title>Document</title>
   <style>
+    /* Globais */
+
     html {
       scroll-behavior: smooth;
     }
@@ -26,32 +27,9 @@
     }
 
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       background-color: #004aad;
-      font-family: "Montserrat", sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: #fff;
-      position: relative;
-    }
-
-    header {
-      color: #ffffff;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 40px 0 0;
-    }
-
-    main,
-    .teste {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 56px 0;
     }
 
     h2 {
@@ -60,232 +38,68 @@
       margin-bottom: 24px;
     }
 
-    h3 {
-      font-weight: 600;
-    }
-
     p {
       font-size: 18px;
     }
 
-    a {
-      color: #004aad;
+    p:not(.hero p) {
+      line-height: 28px;
     }
 
-    nav {
+    /* Containers */
+
+    .container {
+      max-width: 1280px;
       width: 100%;
+    }
+
+    .centralize {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Componentes em comum entre as seções */
+
+    .o-que-oferecemos h2,
+    .plataforma h2,
+    #motivos h2 {
+      padding-bottom: 16px;
+    }
+
+    .o-que-oferecemos h2,
+    #motivos h2 {
+      border-bottom: 3px solid #fff;
+    }
+
+    /* Menu */
+
+    .menu .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 0;
     }
 
     #logo {
-      width: 165px;
-      user-select: none;
+      width: 150px;
     }
 
-    .container {
-      max-width: 1180px;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .navigation ul {
+    .navegacao ul {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 32px;
     }
 
-    .navigation ul li a {
+    .navegacao ul li a {
       color: #fff;
       text-transform: uppercase;
       position: relative;
       padding-bottom: 8px;
     }
 
-    .navigation ul li:not(:last-child) a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #fff;
-      bottom: 0;
-      left: 0;
-      transition: 0.4s ease-in-out;
-    }
-
-    .navigation ul li a:hover::after {
-      width: 100%;
-    }
-
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 56px;
-    }
-
-    .hero-calling {
-      font-size: 56px;
-      font-weight: 200;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .hero-small-calling {
-      font-size: 24px;
-      padding: 8px 0 16px;
-    }
-
-    .hero-small-calling-impact {
-      font-weight: 500;
-    }
-
-    .hero-button {
-      width: 50%;
-      padding: 10px 8px;
-      background-color: #ffffff52;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 32px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      color: #fff;
-      cursor: pointer;
-      transition: 0.4s ease-in-out;
-    }
-
-    .navigation li .login-button:hover {
-      box-shadow: rgba(255, 255, 255, 0.377) 0px 8px 32px;
-    }
-
-    .hero-image {
-      width: 300px;
-    }
-
-    .hero-text {
-      width: 33%;
-      text-align: right;
-      font-size: 16px;
-    }
-
-    .hero-text p {
-      margin-top: 12px;
-    }
-
-    /* Seção "Como funciona?" e "Primeiros passos" */
-
-    .cards {
-      background-color: #fff;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 56px 0 64px;
-      background-image: url(images/waves.png);
-      background-repeat: repeat-x;
-      background-size: 600px;
-      background-position: center;
-    }
-
-    .cards h2 {
-      color: #004aad;
-      font-size: 40px;
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .cards .container {
-      display: flex;
-      gap: 88px;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .cards #how-it-works img {
-      width: 550px;
-    }
-
-    /* Rodapé */
-
-    footer {
-      color: #004aad;
-      text-align: center;
-      padding: 48px 0;
-    }
-
-    /* Seção "Por que escolher o SpotHub" */
-
-    .section-group {
-      width: 100%;
-      background: rgb(0, 74, 173);
-      background: linear-gradient(180deg,
-          rgba(0, 74, 173, 1) 0%,
-          rgba(41, 103, 186, 1) 65%,
-          rgba(255, 255, 255, 0.9) 100%);
-    }
-
-    .section-group img {
-      height: 100%;
-    }
-
-    .reasons-to-choose-us,
-    .what-are-irs,
-    #contact-us {
-      padding: 56px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .reasons-to-choose-us .container,
-    .what-are-irs .container,
-    #contact-us .container {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 80px;
-    }
-
-    p:not(.hero-text p) {
-      line-height: 28px;
-    }
-
-    .what-are-irs .container img {
-      height: 100%;
-      transform: scaleX(-1);
-    }
-
-    .what-are-irs .container {
-      text-align: right;
-    }
-
-    .what-are-irs .container img {
-      width: 220px;
-    }
-
-    #contact-us .container {
-      background-color: #fff;
-      padding: 40px;
-      color: #004aad;
-      display: flex;
-      align-items: center;
-      border-radius: 16px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    #contact-us img {
-      width: 265px;
-    }
-
-    #contact-us a {
-      font-weight: 500;
-    }
-
-    .navigation li .login-button {
+    .navegacao .botao-login {
       background-color: #ffffff52;
       padding: 8px 12px;
       border-radius: 8px;
@@ -294,639 +108,20 @@
       transition: 0.4s ease-in-out;
     }
 
-    .main-features,
-    .profiles,
-    .our-panel {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      padding: 56px 0;
-    }
-
-    .main-features {
-      background-color: #004aad;
-      color: #fff;
-      background-image: url(images/waves.png);
-      background-repeat: repeat-x;
-      background-size: 600px;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      padding: 0 0 72px;
-    }
-
-    .main-features h2 {
-      /* text-align: center;
-  background-color: #fff;
-  color: #004aad;
-  margin: 16px 0 160px;
-  border-radius: 999px;
-  padding: 8px; */
-
-      margin: 16px 0 160px;
-      border-bottom: 3px solid #fff;
-      padding: 0 0 16px 16px;
-    }
-
-    .our-panel {
-      background-color: #fff;
-      color: #004aad;
-      background-image: url(images/waves.png);
-      background-repeat: repeat-x;
-      background-size: 600px;
-      background-position: center;
-    }
-
-    .our-panel h2 {
-      margin: 16px 0 40px;
-      border-bottom: 3px solid #004aad;
-      padding: 0 0 16px 16px;
-    }
-
-    .our-panel p {
-      margin-bottom: 40px;
-    }
-
-    .feature-cards {
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 32px;
-    }
-
-    .feature-card {
-      width: 271px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      background-color: #fff;
-      color: #004aad;
-      padding: 64px 24px 24px;
-      border-radius: 8px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      position: relative;
-    }
-
-    .feature-card img {
-      position: absolute;
-    }
-
-    .feature-card .flying-robot {
-      width: 75px;
-      top: -75px;
-      right: 34%;
-    }
-
-    .feature-card .devices {
-      width: 49%;
-      top: -64px;
-      right: 21%;
-    }
-
-    .feature-card .apis {
-      width: 50%;
-      top: -64px;
-      right: 25%;
-    }
-
-    .feature-card .opec {
-      width: 52%;
-      top: -56px;
-      right: 23%;
-    }
-
-    .feature-card div h3 {
-      margin-bottom: 8px;
-    }
-
-    .who-will-benefit-from-this {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 56px;
-    }
-
-    .profiles {
-      background-color: #fff;
-      color: #004aad;
-    }
-
-    .profiles h2 {
-      text-align: center;
-    }
-
-    .profile-cards {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 32px;
-    }
-
-    .profile-card {
-      background-color: #004aad;
-      color: #fff;
-      margin: 8px 0;
-      border-radius: 8px;
-      width: 100%;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 16px;
-    }
-
-    .profile-card-content {
-      padding: 24px;
-    }
-
-    .profile-card-content h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .profile-card-content p {
-      font-size: 16px;
-    }
-
-    .profile-card img {
-      float: left;
-      width: 170px;
-      height: 170px;
-      border-radius: 8px;
-      object-fit: cover;
-      margin-right: 24px;
-    }
-
-    .whatsapp-logo {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      background-color: #31ba45;
-      padding: 12px 12px 8px 12px;
-      border-radius: 50%;
-      animation: shake-animation 9s infinite;
-    }
-
-    .whatsapp-logo img {
-      width: 35px;
-    }
-
-    @keyframes shake-animation {
-
-      0%,
-      22.22% {
-        transform: translateY(0);
-        /* Ponto inicial e final da animação */
-      }
-
-      5%,
-      15% {
-        transform: translateY(-6px);
-        /* Movimenta rapidamente para a esquerda */
-      }
-
-      10%,
-      20% {
-        transform: translateY(6px);
-        /* Movimenta rapidamente para a direita */
-      }
-    }
-
-    .image-card {
-      background-color: #004aad;
-      border-radius: 8px;
-      padding: 16px;
-    }
-
-    .image-card img {
-      border-radius: 8px;
-    }
-
-    /* Seção "7 motivos para escolher o SpotHub" */
-
-    .reasons-to-choose-us {
-      padding: 0;
-    }
-
-    .reasons-to-choose-us .container img {
-      width: 80px;
-      padding: 48px 0;
-      margin-left: 32px;
-    }
-
-    .reasons-to-choose-us .title-with-image {
-      display: flex;
-      align-items: center;
-      /* justify-content: space-between; */
-      gap: 32px;
-    }
-
-    .reasons-to-choose-us h2 {
-      margin-top: 16px;
-      border-bottom: 3px solid #fff;
-      padding-bottom: 16px;
-    }
-
-    .reasons-to-choose-us .reasons-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      margin-bottom: 48px;
-      background-color: #fff;
-      color: #004bad;
-      padding: 16px;
-      border-radius: 16px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    }
-
-    .reasons-list li .list-item-title {
-      display: block;
-      font-weight: 500;
-      font-size: 24px;
-      margin-bottom: 4px;
-    }
-
-    .step-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #004aad;
-      color: #fff;
-      min-width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    .step-number span {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    @media (min-width: 320px) and (max-width: 374px) {
-      h2 {
-        font-size: 28px;
-      }
-
-      .menu {
-        margin-left: 32px;
-      }
-
-      .hero,
-      .feature-cards,
-      .cards .container,
-      .what-are-irs .container,
-      #contact-us .container {
-        flex-direction: column;
-      }
-
-      .feature-cards,
-      .cards .container,
-      .what-are-irs .container {
-        align-items: center;
-      }
-
-      .hero-image {
-        width: 250px;
-      }
-
-      .hero-text {
-        width: 80%;
-        text-align: left;
-      }
-
-      .hero-calling {
-        font-size: 48px;
-      }
-
-      .container {
-        max-width: 360px;
-      }
-
-      .main-features h2 {
-        margin: 16px 32px 160px;
-      }
-
-      .feature-cards {
-        gap: 120px;
-      }
-
-      .profile-card-content h3 {
-        font-size: 18px;
-      }
-
-      .cards .container #profiles {
-        padding: 0 40px;
-      }
-
-      .profile-card img {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-        margin-bottom: 8px;
-      }
-
-      .cards #how-it-works img {
-        width: 350px;
-        margin-left: 8px;
-      }
-
-      .what-are-irs .container,
-      #contact-us,
-      .reasons-to-choose-us .container {
-        padding: 0 32px;
-      }
-
-      #contact-us img,
-      .what-are-irs .container img {
-        width: 165px;
-      }
-    }
-
-    @media (min-width: 375px) and (max-width: 992px) {
-
-      .our-panel {
-        padding-left: 88px;
-        padding-right: 88px;
-        padding-bottom: 24px;
-      }
-
-      header .container,
-      .main-features .container,
-      .cards .container,
-      #how-it-works .container {
-        width: 80%;
-      }
-
-      .profile-card-content {
-        padding: 16px;
-      }
-
-      p {
-        font-size: 16px;
-      }
-
-      h2,
-      .cards h2 {
-        font-size: 32px;
-      }
-
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-      }
-
-      .hero {
-        flex-direction: column;
-      }
-
-      .hero-calling {
-        text-align: center;
-      }
-
-      .hero-image {
-        width: 250px;
-      }
-
-      .hero-text {
-        width: 80%;
-        text-align: left;
-      }
-
-      .cards {
-        margin-top: 0px;
-        padding-bottom: 16px;
-        padding-top: 40px;
-      }
-
-      #how-it-works,
-      #profiles {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .cards #how-it-works img {
-        width: 120%;
-        margin-left: 10px;
-      }
-
-      .cards .container {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 32px;
-      }
-
-      .cards img {
-        width: 100%;
-        margin-bottom: 16px;
-      }
-
-      .step-number {
-        float: left;
-        margin-right: 16px;
-      }
-
-      .reasons-to-choose-us .reasons-list li {
-        display: block;
-      }
-
-      .reasons-to-choose-us h2 {
-        margin-top: 0;
-        margin-bottom: 40px;
-      }
-
-      .reasons-to-choose-us {
-        padding: 42px 0 0;
-      }
-
-      .what-are-irs {
-        padding-top: 16px;
-      }
-
-      .what-are-irs .container,
-      .reasons-to-choose-us .container,
-      #contact-us .container {
-        flex-direction: column;
-        width: 80%;
-        gap: 32px;
-        text-align: left;
-        position: relative;
-      }
-
-      .what-are-irs .container h2 {
-        width: 85%;
-      }
-
-      .what-are-irs .container img,
-      .reasons-to-choose-us .container img {
-        position: absolute;
-      }
-
-      .what-are-irs .container img {
-        width: 85px;
-        height: 85px;
-        right: 0;
-        top: 40px;
-        transform: scaleX(1);
-      }
-
-      .reasons-to-choose-us .container img {
-        width: 55px;
-        height: 88px;
-        right: 0;
-        top: 16px;
-      }
-
-      #contact-us .container img {
-        width: 120px;
-      }
-
-      #contact-us {
-        padding: 0;
-      }
-
-      footer {
-        padding: 40px 0;
-      }
-
-      footer span {
-        display: inline-block;
-        padding: 0 80px;
-        font-size: 14px;
-      }
-
-      .main-features {
-        padding: 0;
-        padding-bottom: 48px;
-      }
-
-      .main-features h2 {
-        margin-bottom: 136px;
-        padding: 0 0 16px;
-        text-align: center;
-      }
-
-      .feature-cards {
-        flex-direction: column;
-        gap: 112px;
-      }
-
-      .reasons-list li .list-item-title {
-        font-size: 18px;
-      }
-
-      .feature-card {
-        width: 100%;
-      }
-
-      .feature-card .flying-robot {
-        right: 37%;
-      }
-
-      .feature-card .devices {
-        width: 42%;
-        right: 25%;
-      }
-
-      .feature-card .apis {
-        width: 40%;
-        right: 30%;
-      }
-
-      .feature-card .opec {
-        width: 42%;
-        right: 28%;
-      }
-
-      .whatsapp-logo {
-        right: 24px;
-        bottom: 24px;
-      }
-
-      .whatsapp-logo img {
-        width: 25px;
-      }
-    }
-
-    @media (min-width: 428px) and (max-width: 576px) {
-
-      .feature-card .devices,
-      .feature-card .apis {
-        width: 35%;
-        top: -72px;
-      }
-
-      .feature-card .devices,
-      .feature-card .opec {
-        right: 30%;
-      }
-
-      .feature-card .apis {
-        right: 33%;
-      }
-
-      .feature-card .opec {
-        width: 37%;
-        top: -64px;
-      }
-
-      .feature-card .flying-robot {
-        right: 40%;
-      }
-
-      .what-are-irs .container img {
-        top: 24px;
-      }
-
-      .reasons-to-choose-us .container img {
-        top: -8px;
-      }
-
-      .cards .container {
-        display: flex;
-        gap: 48px;
-        align-items: center;
-        justify-content: center;
-      }
-    }
-
-    @media (min-width: 768px) and (max-width: 992px) {
-      .cards #how-it-works img {
-        width: 100%;
-      }
-
-      .what-are-irs .container img {
-        top: 0px;
-        right: 112px;
-      }
-
-      .reasons-to-choose-us .container img {
-        top: -40px;
-        right: 88px;
-      }
+    .navegacao .botao-login:hover {
+      box-shadow: rgba(255, 255, 255, 0.377) 0px 8px 32px;
     }
 
     /* Menu hambúrguer */
 
-    .hamburger {
+    .hamburguer {
       display: none;
       flex-direction: column;
       justify-content: space-between;
       width: 30px;
       height: 24px;
       cursor: pointer;
-      z-index: 1000;
-      /* Certifique-se que o ícone hambúrguer fica sobre outros elementos */
+      z-index: 999;
       position: absolute;
       /* Posição normal quando o menu está fechado */
       top: 59px;
@@ -935,8 +130,7 @@
       /* Ajuste conforme necessário */
     }
 
-    /* Estilos das barras do hambúrguer */
-    .hamburger span {
+    .hamburguer span {
       display: block;
       height: 3px;
       background-color: white;
@@ -946,13 +140,13 @@
 
     /* Menu hambúrguer em resoluções menores */
     @media (max-width: 768px) {
-      .our-panel {
-        padding-left: 48px;
-        padding-right: 48px;
+      .plataforma {
+        padding-left: 32px;
+        padding-right: 32px;
         padding-bottom: 24px;
       }
 
-      .navigation {
+      .navegacao {
         position: fixed;
         top: 0;
         right: -100%;
@@ -969,24 +163,25 @@
           rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
       }
 
-      .navigation ul {
+      .navegacao ul {
         flex-direction: column;
         gap: 24px;
       }
 
-      .navigation.active {
+      .navegacao.active {
         right: 0;
       }
 
       .menu {
         justify-content: space-between;
+        margin-left: 7%;
       }
 
-      .hamburger {
+      .hamburguer {
         display: flex;
       }
 
-      .hamburger.open {
+      .hamburguer.open {
         position: fixed;
         /* Fixa o X no topo da página quando o menu está aberto */
         top: 59px;
@@ -995,28 +190,28 @@
         /* Ajuste conforme necessário */
       }
 
-      .hamburger.open span {
+      .hamburguer.open span {
         background-color: #004aad;
       }
 
       /* Animação do ícone de hambúrguer */
-      .hamburger.open span:nth-child(1) {
+      .hamburguer.open span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
       }
 
-      .hamburger.open span:nth-child(2) {
+      .hamburguer.open span:nth-child(2) {
         opacity: 0;
       }
 
-      .hamburger.open span:nth-child(3) {
+      .hamburguer.open span:nth-child(3) {
         transform: translateY(-12px) rotate(-45deg);
       }
 
-      .navigation ul {
+      .navegacao ul {
         margin-top: 130px;
       }
 
-      .navigation ul li a {
+      .navegacao ul li a {
         font-size: 18px;
         padding: 8px 0;
         color: #004aad;
@@ -1024,166 +219,782 @@
         text-align: center;
       }
 
-      .navigation ul li a.login-button {
+      .navegacao ul li a.botao-login {
         margin-top: 32px;
         color: #fff;
         background-color: #004bad;
       }
+    }
+
+    /* Main */
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 56px;
+    }
+
+    .hero-slogan {
+      font-size: 56px;
+      font-weight: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .hero-slogan-pequeno {
+      font-size: 24px;
+      padding: 8px 0 16px;
+    }
+
+    .hero-slogan-impacto {
+      font-weight: 500;
+    }
+
+    .hero-mascote {
+      width: 300px;
+    }
+
+    .hero-texto {
+      width: 33%;
+      text-align: right;
+    }
+
+    .hero-texto p {
+      margin-top: 12px;
+    }
+
+    /* Seções "O que oferecemos", "Nosso painel intuitivo" e "Entenda o fluxo" */
+
+    .o-que-oferecemos,
+    .plataforma,
+    .perfis-fluxo {
+      width: 100%;
+      background-image: url(images/waves.png);
+      background-repeat: repeat-x;
+      background-size: 600px;
+      background-position: center;
+    }
+
+    /* Seções "O que oferecemos" */
+
+    .o-que-oferecemos {
+      padding: 56px 0 80px;
+    }
+
+    .o-que-oferecemos h2 {
+      margin: 16px 0 156px;
+    }
+
+    .cards {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .cards .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      background-color: #fff;
+      color: #004aad;
+      padding: 64px 24px 24px;
+      border-radius: 8px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      position: relative;
+    }
+
+    .card img {
+      position: absolute;
+    }
+
+    .card .flying-robot {
+      width: 30%;
+      top: -80px;
+      right: 34%;
+    }
+
+    .card .devices {
+      width: 45%;
+      top: -72px;
+      right: 23%;
+    }
+
+    .card .apis {
+      width: 47%;
+      top: -64px;
+      right: 25%;
+    }
+
+    .card .opec {
+      width: 52%;
+      top: -64px;
+      right: 23%;
+    }
+
+    .card h3 {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    /* Seção "A plataforma" e container das seções "Conheça os perfis" e "Entenda o fluxo" */
+
+    .plataforma,
+    .perfis-fluxo {
+      background-color: #fff;
+      color: #004aad;
+      padding: 56px 0;
+    }
+
+    /* Seção "A plataforma" */
+
+    .plataforma h2 {
+      border-bottom: 3px solid #004aad;
+      margin-bottom: 40px;
+    }
+
+    .plataforma p {
+      margin-bottom: 56px;
+    }
+
+    .painel-bg {
+      background-color: #004aad;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 32px;
+    }
+
+    /* Seções "Conheça os perfis" e "Entenda o fluxo" */
+
+    .perfis-fluxo {
+      width: 100%;
+    }
+
+    .perfis-fluxo h2 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .perfis-fluxo .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 88px;
+    }
+
+    /* Seção "Conheça os perfis" */
+
+    .cards-perfis {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .card-perfil {
+      background-color: #004aad;
+      color: #fff;
+      margin: 8px 0;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card-perfil img {
+      float: left;
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 24px;
+    }
+
+    .card-perfil h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .card-perfil p {
+      line-height: 28px;
+      font-size: 16px;
+    }
+
+    /* Seção "Entenda o fluxo" */
+
+    #fluxo img {
+      height: 640px;
+    }
+
+    /* Seção "7 motivos para escolher o SpotHub" */
+
+    #motivos {
+      width: 100%;
+    }
+
+    #motivos .container {
+      justify-content: flex-start;
+    }
+
+    .titulo-com-imagem {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .titulo-com-imagem img {
+      width: 80px;
+      padding: 48px 0;
+      margin-left: 32px;
+    }
+
+    .lista-motivos li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 48px;
+      background-color: #fff;
+      color: #004bad;
+      padding: 16px;
+      border-radius: 16px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .passo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #004aad;
+      color: #fff;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .passo span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .titulo-item-lista {
+      display: block;
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 4px;
+    }
+
+    /* Seção "O que são PIs?" */
+
+    .o-que-sao-pis {
+      padding: 56px 0;
+    }
+
+    .o-que-sao-pis .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+    }
+
+    .o-que-sao-pis img {
+      width: 220px;
+      transform: scaleX(-1);
+    }
+
+    .o-que-sao-pis .explicacao {
+      text-align: right;
+    }
+
+    /* Seção "Contato" */
+
+    #contato {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 56px 0;
+      background: linear-gradient(180deg, rgba(0, 74, 173, 1) 0%, rgba(41, 103, 186, 1) 45%, rgba(255, 255, 255, 0.9) 100%);
+    }
+
+    .card-contato {
+      background-color: #fff;
+      padding: 40px;
+      color: #004aad;
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    .card-contato a {
+      color: #004aad;
+      font-weight: 600;
+    }
+
+    .card-contato img {
+      width: 265px;
+    }
+
+    /* Rodapé */
+
+    footer {
+      color: #004aad;
+      text-align: center;
+      padding-top: 112px;
+    }
+
+    footer span,
+    footer a {
+      display: block;
+    }
+
+    footer a {
+      font-size: 14px;
+      margin-top: 24px;
+      color: #004aad;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 320px) and (max-width: 375px) {
+      .card .flying-robot {
+        width: 30%;
+        top: -79px;
+        right: 32%;
+      }
+
+      .card .devices {
+        top: -52px;
+      }
+
+      .card .apis {
+        width: 45%;
+        top: -52px;
+        right: 28%;
+      }
+
+      .card .opec {
+        width: 48%;
+        top: -48px;
+        right: 25%;
+      }
+    }
+
+    @media (min-width: 375px) and (max-width: 425px) {
+      .card .flying-robot {
+        width: 28%;
+        top: -87px;
+        right: 33%;
+      }
+
+      .card .devices {
+        width: 44%;
+        top: -62px;
+        right: 24%;
+      }
+
+      .card .apis {
+        width: 42%;
+        top: -54px;
+        right: 29%;
+      }
+
+      .card .opec {
+        width: 45%;
+        top: -54px;
+        right: 26%;
+      }
+    }
+
+    @media (min-width: 425px) and (max-width: 768px) {
+      .card .flying-robot {
+        width: 26%;
+        top: -93px;
+        right: 34%;
+      }
+
+      .card .devices {
+        width: 42%;
+        top: -65px;
+        right: 25%;
+      }
+
+      .card .apis {
+        width: 40%;
+        top: -62px;
+        right: 30%;
+      }
+
+      .card .opec {
+        width: 43%;
+        top: -58px;
+        right: 27%;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .hero,
+      .plataforma .container,
+      .perfis-fluxo .container,
+      #motivos .container,
+      .o-que-sao-pis,
+      #contato .container,
+      .o-que-oferecemos {
+        width: 80%;
+      }
+
+      .hero,
+      .cards,
+      .perfis-fluxo .container,
+      .titulo-com-imagem,
+      .lista-motivos li,
+      .o-que-sao-pis .container,
+      .card-contato {
+        flex-wrap: wrap;
+      }
+
+      h2,
+      .perfis-fluxo h2,
+      #motivos h2 {
+        font-size: 34px;
+      }
+
+      .hero {
+        justify-content: center;
+      }
+
+      .hero-slogan,
+      .hero-texto {
+        width: 100%;
+      }
+
+      .hero-slogan {
+        font-size: 40px;
+      }
+
+      .hero-mascote {
+        width: 225px;
+      }
+
+      .hero-texto {
+        text-align: left;
+      }
+
+      .cards {
+        gap: 112px;
+      }
+
+      .card-perfil img {
+        margin-bottom: 16px;
+        width: 100%;
+      }
+
+      .plataforma {
+        padding-bottom: 24px;
+      }
+
+      .perfis-fluxo {
+        padding-top: 40px;
+      }
+
+      .perfis-fluxo .container {
+        gap: 56px;
+      }
+
+      #fluxo img {
+        height: 100%;
+        width: 100%;
+      }
+
+      #motivos {
+        padding-top: 56px;
+      }
+
+      #motivos .titulo-com-imagem img {
+        width: 100px;
+        padding: 0;
+        margin-left: 0;
+      }
+
+      #motivos .titulo-com-imagem {
+        margin-bottom: 32px;
+      }
+
+      .o-que-sao-pis {
+        padding-top: 32px;
+        padding-bottom: 24px;
+      }
+
+      .o-que-sao-pis .container {
+        justify-content: flex-start;
+        gap: 32px;
+      }
+
+      .o-que-sao-pis img {
+        width: 170px;
+      }
+
+      .o-que-sao-pis .explicacao {
+        text-align: left;
+      }
+
+      .card-contato {
+        padding: 24px;
+        justify-content: center;
+      }
+
+      .card-contato img {
+        width: 160px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+      }
+
+      footer {
+        width: 80%;
+        padding-top: 88px;
+      }
+
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .card .flying-robot {
+        width: 15%;
+        top: -98px;
+        right: 40%;
+      }
+
+      .card .devices {
+        width: 24%;
+        top: -66px;
+        right: 36%;
+      }
+
+      .card .apis {
+        width: 23%;
+        top: -67px;
+        right: 39%;
+      }
+
+      .card .opec {
+        width: 25%;
+        top: -64px;
+        right: 37%;
+      }
+
+      .card-contato {
+        justify-content: center;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1440px) {
+      .container {
+        max-width: 80%;
+      }
+
+      .hero {
+        flex-wrap: wrap;
+      }
+
+      .hero-texto {
+        width: 100%;
+        text-align: left;
+      }
+
+      .cards {
+        flex-wrap: wrap;
+        gap: 112px;
+      }
+
+      .card .flying-robot {
+        width: 11%;
+        top: -93px;
+        right: 43%;
+      }
+
+      .card .devices {
+        width: 17%;
+        top: -62px;
+        right: 40%;
+      }
+
+      .card .apis {
+        width: 17%;
+        top: -66px;
+        right: 42%;
+      }
+
+      .card .opec {
+        width: 16%;
+        top: -54px;
+        right: 42%;
+      }
+
+      .perfis-fluxo .container {
+        flex-wrap: wrap;
+        justify-content: center;
+
+      }
+
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="container menu">
-      <img src="images/logo.png" alt="Logo SpotHub" id="logo" />
-      <nav class="navigation">
-        <ul>
-          <li><a href="#how-it-works">Como funciona?</a></li>
-          <li><a href="#reasons">Motivos para nos escolher</a></li>
-          <li><a href="#contact-us">Contato</a></li>
-          <li><a href="#" class="login-button">Login</a></li>
-        </ul>
-      </nav>
-      <div class="hamburger" id="hamburger">
+    <div class="menu centralize">
+      <div class="container">
+        <img src="images/logo.png" alt="Logo SpotHub" id="logo" />
+        <nav class="navegacao">
+          <ul>
+            <li><a href="#fluxo">Como funciona?</a></li>
+            <li><a href="#motivos">Motivos para nos escolher</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#" class="botao-login">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="hamburguer" id="hamburguer">
         <span></span>
         <span></span>
         <span></span>
       </div>
     </div>
   </header>
-
-  <main>
-    <div class="hero container">
-      <section class="hero-calling">
+  <main class="centralize">
+    <section class="hero container">
+      <div class="hero-slogan">
         <span>Agilidade</span>
         <span>Automação</span>
         <span>Resultados</span>
-        <span class="hero-small-calling">Isso é <span class="hero-small-calling-impact">SpotHub</span></span>
-      </section>
-      <img src="images/bot.png" alt="Ilustração" class="hero-image">
-      <section class="hero-text">
+        <span class="hero-slogan-pequeno">Isso é <span class="hero-slogan-impacto">SpotHub</span></span>
+      </div>
+      <img src="images/bot.png" alt="Ilustração" class="hero-mascote">
+      <div class="hero-texto">
         <h2>O que é SpotHub?</h2>
         <p>O SpotHub é a plataforma que automatiza e simplifica a interação entre agências de publicidade e veículos de
           mídia. Com ele, o fluxo de trabalho fica mais rápido e confiável, eliminando processos manuais.</p>
         <p>Nossa solução permite o envio automático de Pedidos de Inserção (PIs), o acompanhamento em tempo real e a
-          gestão
-          completa das execuções, com notificações e e-mails automáticos que mantêm todas as partes por dentro do que
-          está acontecendo. Mais eficiência,
-          menos complicação: nossa IA irá se encarregar de tudo
-          para você! 😉 Assim, você
-          foca no que realmente importa: resultados.</p>
-      </section>
+          gestão completa das execuções, com notificações e e-mails automáticos que mantêm todas as partes por dentro do
+          que está acontecendo. Mais eficiência, menos complicação: nossa IA irá se encarregar de tudo para você! 😉
+          Assim, você foca no que realmente importa: resultados.</p>
+      </div>
+    </section>
+    <section class="o-que-oferecemos centralize">
+      <div class="container">
+        <h2>O que oferecemos</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="images/bot-flying.png" alt="Automação" class="flying-robot">
+            <div>
+              <h3>Automação Completa do Processo</h3>
+              <p>Do recebimento à veiculação, o SpotHub automatiza todas as etapas, acelerando a operação e garantindo
+                consistência e precisão nos dados.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/devices.png" alt="Dispositivos" class="devices">
+            <div>
+              <h3>Painel Web Intuitivo</h3>
+              <p>Nosso painel completo permite às agências e veículos monitorarem o status de cada PI em todas as etapas
+                do
+                processo diretamente no navegador. Acesse de onde quiser:
+                computador ou celular!
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/api.png" alt="APIs" class="apis">
+            <div>
+              <h3>Integração Fácil via REST API</h3>
+              <p>Para veículos e agências que desejam uma integração ainda mais profunda, o SpotHub oferece uma API
+                robusta
+                e
+                segura para automação direta em seus sistemas internos.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="images/opec.png" alt="OPEC" class="opec">
+            <div>
+              <h3>Conectividade com Sistemas de OPEC</h3>
+              <p>Total compatibilidade com os principais softwares de cabine e plataformas de mídia, integrando de forma
+                nativa com os sistemas internos de operação dos veículos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="plataforma centralize">
+      <div class="container">
+        <h2>A plataforma</h2>
+        <p>Conheça um pouco da nossa interface: simples e intuitiva, mas completa. Basta enviar o(s) PI(s) para o e-mail
+          do SpotHub e todas as informações que você precisa estarão concentradas em um só lugar. Gerencie suas
+          campanhas, acompanhe os status e realize todo o fluxo necessário através de uma única plataforma: simplifique
+          com o SpotHub. Nós nos encarregamos de gerir e notificar todas as etapas para todas as partes!
+        </p>
+        <div class="painel-bg"><img src="images/demo.png" alt="Demonstração" width="100%"></div>
+      </div>
+    </section>
+    <div class="perfis-fluxo centralize">
+      <div class="container">
+        <section class="perfis">
+          <h2>Conheça os perfis</h2>
+          <div class="cards-perfis">
+            <div class="card-perfil">
+              <div><img src="images/agency2.jpg" alt="Agência de publicidade">
+                <h3>Agências de Publicidade</h3>
+                <p>Envie pedidos de inserção de mídia para múltiplos veículos com apenas alguns cliques: o
+                  SpotHub permite que sua equipe foque na criação e planejamento, acelerando resultados. Deixe o
+                  trabalho pesado para o SpotHub: ele se encarrega de gerenciar a veiculação de forma automática e
+                  centralizada.
+                </p>
+              </div>
+            </div>
+            <div class="card-perfil">
+              <div><img src="images/media2.jpg" alt="Agência de publicidade">
+                <h3>Veículos de Mídia</h3>
+                <p>Rádios, TVs, jornais e plataformas digitais se beneficiam com a integração automatizada de pedidos de
+                  inserção nos mais diversos softwares utilizados por elas. O SpotHub facilita o recebimento, a
+                  validação e o agendamento das campanhas, otimizando o fluxo entre OPEC e sistemas de veiculação.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="fluxo">
+          <h2>Entenda o fluxo</h2>
+          <img src="images/how-it-works.png" alt="Fluxo">
+        </section>
+      </div>
     </div>
-  </main>
-
-  <div class="main-features">
-    <section class="container">
-      <h2>O que oferecemos</h2>
-      <div class="feature-cards">
-        <div class="feature-card">
-          <img src="images/bot-flying.png" alt="Automação" class="flying-robot">
-          <div>
-            <h3>Automação Completa do Processo</h3>
-            <p>Do recebimento à veiculação, o SpotHub automatiza todas as etapas, acelerando a operação e garantindo
-              consistência e precisão nos dados.</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <img src="images/devices.png" alt="Dispositivos" class="devices">
-          <div>
-            <h3>Painel Web Intuitivo</h3>
-            <p>Nosso painel completo permite às agências e veículos monitorarem o status de cada PI em todas as etapas
-              do
-              processo diretamente no navegador. Acesse de onde quiser:
-              computador ou celular!
-            </p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <img src="images/api.png" alt="APIs" class="apis">
-          <div>
-            <h3>Integração Fácil via REST API</h3>
-            <p>Para veículos e agências que desejam uma integração ainda mais profunda, o SpotHub oferece uma API
-              robusta
-              e
-              segura para automação direta em seus sistemas internos.</p>
-          </div>
-        </div>
-        <div class="feature-card">
-          <img src="images/opec.png" alt="OPEC" class="opec">
-          <div>
-            <h3>Conectividade com Sistemas de OPEC</h3>
-            <p>Total compatibilidade com os principais softwares de cabine e plataformas de mídia, integrando de forma
-              nativa com os sistemas internos de operação dos veículos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <div class="our-panel">
-    <section class="container">
-      <h2>Nosso painel intuitivo</h2>
-      <p>Conheça um pouco da nossa interface: simples e intuitiva, mas completa. Basta enviar o(s) PI(s) para o e-mail
-        do SpotHub e todas as informações que você precisa
-        estarão concentradas em um só lugar. Gerencie suas campanhas, acompanhe os status e realize todo o fluxo
-        necessário através de uma única plataforma: simplifique com o SpotHub. Nós nos encarregamos de gerir e notificar
-        todas as etapas para todas as partes!</p>
-      <div class="image-card"><img src="images/demo.png" alt="Demonstração" width="100%"></div>
-    </section>
-  </div>
-
-  <div class="cards">
-    <section class="container">
-      <div id="profiles">
-        <h2>Conheça os perfis</h2>
-        <div class="profile-cards">
-          <div class="profile-card">
-            <div class="profile-card-content">
-              <img src="images/agency2.jpg" alt="Agência de publicidade">
-              <h3>Agências de Publicidade</h3>
-              <p>Envie pedidos de inserção de mídia para múltiplos veículos com apenas alguns cliques: o
-                SpotHub permite que sua equipe foque na criação e planejamento, acelerando resultados. Deixe o trabalho
-                pesado para o SpotHub: ele se encarrega de gerenciar a veiculação de forma automática e centralizada.
-              </p>
-            </div>
-          </div>
-          <div class="profile-card">
-            <div class="profile-card-content">
-              <img src="images/media2.jpg" alt="Veículos midiáticos">
-              <h3>Veículos de Mídia</h3>
-              <p>Rádios, TVs, jornais e plataformas digitais se beneficiam com a integração automatizada de pedidos
-                de inserção nos mais diversos softwares utilizados por elas. O SpotHub facilita o recebimento, a
-                validação
-                e o agendamento das
-                campanhas,
-                otimizando o
-                fluxo entre OPEC e sistemas de veiculação.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="how-it-works">
-        <h2>Entenda o fluxo</h2>
-        <img src="images/how-it-works.png" alt="Fluxo" />
-      </div>
-    </section>
-  </div>
-
-  <div class="reasons-to-choose-us" id="reasons">
-    <section class="container">
-      <div>
-        <div class="title-with-image">
+    <section id="motivos" class="centralize">
+      <div class="container">
+        <div class="titulo-com-imagem">
           <img src="images/bot2.png" alt="Mascote SpotHub">
           <h2>7 motivos para escolher o SpotHub</h2>
         </div>
-        <ol class="reasons-list">
+        <ul class="lista-motivos">
           <li>
-            <div class="step-number"><span>1</span></div>
+            <div class="passo"><span>1</span></div>
             <p>
-              <span class="list-item-title">Eliminação de Processos Manuais</span> Diga adeus aos e-mails
+              <span class="titulo-item-lista">Eliminação de Processos Manuais</span> Diga adeus aos e-mails
               intermináveis para aprovação e
               programação de
               veiculações.
@@ -1191,96 +1002,93 @@
             </p>
           </li>
           <li>
-            <div class="step-number"><span>2</span></div>
-            <p><span class="list-item-title">Mais Precisão</span> Elimine erros e garanta que tudo saia conforme o
+            <div class="passo"><span>2</span></div>
+            <p><span class="titulo-item-lista">Mais Precisão</span> Elimine erros e garanta que tudo saia conforme o
               planejado,
               sempre com as informações corretas. Nossa IA é expert em precisão.</p>
           </li>
           <li>
-            <div class="step-number"><span>3</span></div>
+            <div class="passo"><span>3</span></div>
             <p>
-              <span class="list-item-title">Escalabilidade e Flexibilidade</span> O SpotHub se adapta à sua operação,
+              <span class="titulo-item-lista">Escalabilidade e Flexibilidade</span> O SpotHub se adapta à sua
+              operação,
               seja pequena ou grande, integrando
               facilmente ao seu sistema.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>4</span></div>
-            <p><span class="list-item-title">Monitoramento em Tempo Real</span> Ambas as partes podem acompanhar todo o
+            <div class="passo"><span>4</span></div>
+            <p><span class="titulo-item-lista">Monitoramento em Tempo Real</span> Ambas as partes podem acompanhar
+              todo
+              o
               processo de veiculação
               com relatórios e dashboards em tempo
               real. A cada etapa, todos são avisados por e-mail.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>5</span></div>
-            <p><span class="list-item-title">Integração Rápida</span> Implementação simples, com suporte dedicado para
+            <div class="passo"><span>5</span></div>
+            <p><span class="titulo-item-lista">Integração Rápida</span> Implementação simples, com suporte dedicado
+              para
               todos os tamanhos de agência.</p>
           </li>
           <li>
-            <div class="step-number"><span>6</span></div>
-            <p><span class="list-item-title">Suporte a Multiplataformas</span> Conecte-se a rádios, TVs, jornais, sites
+            <div class="passo"><span>6</span></div>
+            <p><span class="titulo-item-lista">Suporte a Multiplataformas</span> Conecte-se a rádios, TVs, jornais,
+              sites
               e outras mídias em uma única
               plataforma.
             </p>
           </li>
           <li>
-            <div class="step-number"><span>7</span></div>
-            <p><span class="list-item-title">Segurança</span> Dados estão protegidos com criptografia de ponta a ponta,
+            <div class="passo"><span>7</span></div>
+            <p><span class="titulo-item-lista">Segurança</span> Dados estão protegidos com criptografia de ponta a
+              ponta,
               seguindo os mais altos padrões do
               setor.
             </p>
           </li>
-        </ol>
+        </ul>
       </div>
     </section>
-  </div>
-
-  <div class="section-group">
-    <div class="what-are-irs">
-      <section class="container">
-        <img src="images/bot3.png" alt="Mascote SpotHub">
-        <div>
+    <section class="o-que-sao-pis centralize">
+      <div class="container">
+        <img src="images/bot3.png" alt="Mascote">
+        <div class="explicacao">
           <h2>O que são PIs (Pedidos de Inserção)?</h2>
           <p>Um Pedido de Inserção (PI) é um documento de solicitação formal enviado por uma agência de publicidade para
-            um
-            veículo de comunicação (como rádio, TV, sites, ou plataformas de mídia digital) para veicular um anúncio ou
-            comercial. O PI detalha os requisitos da campanha publicitária, como data, horário, frequência e os canais
-            ou
-            programas onde o anúncio deve ser exibido.</p>
+            um veículo de comunicação (como rádio, TV, sites, ou plataformas de mídia digital) para veicular um anúncio
+            ou comercial. O PI detalha os requisitos da campanha publicitária, como data, horário, frequência e os
+            canais ou programas onde o anúncio deve ser exibido.</p>
         </div>
-      </section>
-    </div>
-
-    <div id="contact-us">
-      <section class="container">
-        <div>
-          <h2>Contato</h2>
-          <p>Tem alguma dúvida? Entre em contato conosco! Nosso time está 100% preparado para ajudá-lo sempre que
-            precisar. É só mandar uma mensagem para <a href="mailto:pi@spothub.com.br">pi@spothub.com.br</a> ou para o
-            nosso número, <a href="tel:+5511933461305">(11) 93346-1305</a>, que te
-            retornaremos o mais rápido possível. Você também pode clicar no ícone do WhatsApp no canto inferior direito
-            para ser diretamente levado à uma conversa com nossos profissionais.
-          </p>
+      </div>
+    </section>
+    <section id="contato" class="centralize">
+      <div class="container">
+        <div class="card-contato">
+          <div>
+            <h2>Contato</h2>
+            <p>Tem alguma dúvida? Entre em contato conosco! Nosso time está 100% preparado para ajudá-lo sempre que
+              precisar. É só mandar uma mensagem para <a href="mailto:pi@spothub.com.br">pi@spothub.com.br</a> ou para o
+              nosso número, <a href="tel:+5511933461305">(11) 93346-1305</a>, que te
+              retornaremos o mais rápido possível. Você também pode clicar no ícone do WhatsApp no canto inferior
+              direito
+              para ser diretamente levado à uma conversa com nossos profissionais.
+            </p>
+          </div>
+          <img src="images/bot4.png" alt="Mascote SpotHub">
         </div>
-        <img src="images/bot4.png" alt="Mascote SpotHub">
-      </section>
-    </div>
-
-    <footer>
-      <span>© 2024 SpotHub. Todos os direitos reservados.</span>
-
-    </footer>
-  </div>
-
-  <a href="https://wa.me/+5511933461305/?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20SpotHub." target="_blank"
-    class="whatsapp-logo"><img src="images/whatsapp.png" alt="Fale conosco!"></a>
+      </div>
+      <footer><span>© 2025 SpotHub. Todos os direitos reservados.</span><a href="eula.html">Política de Privacidade</a>
+      </footer>
+    </section>
+  </main>
 
   <script>
     // Espera o carregamento do conteúdo
     document.addEventListener('DOMContentLoaded', function () {
       // Seleciona o botão
-      const loginButton = document.querySelector('.login-button');
+      const loginButton = document.querySelector('.botao-login');
 
       // Adiciona o ouvinte de evento de clique no botão
       loginButton.addEventListener('click', function () {
@@ -1297,12 +1105,12 @@
       });
     });
 
-    const hamburger = document.getElementById('hamburger');
-    const navigation = document.querySelector('.navigation');
+    const hamburguer = document.getElementById('hamburguer');
+    const navegacao = document.querySelector('.navegacao');
 
-    hamburger.addEventListener('click', () => {
-      navigation.classList.toggle('active');
-      hamburger.classList.toggle('open');
+    hamburguer.addEventListener('click', () => {
+      navegacao.classList.toggle('active');
+      hamburguer.classList.toggle('open');
     });
   </script>
 

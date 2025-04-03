@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpotHub - Política de Privacidade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #004aad;
+      font-family: "Montserrat", sans-serif;
+      color: #fff;
+      position: relative;
+    }
+
+    header {
+      color: #ffffff;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    .container {
+      max-width: 1180px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h1,
+    h2,
+    h3,
+    a {
+      color: #004aad;
+      margin-bottom: 16px;
+    }
+
+    a {
+      margin: 0;
+    }
+
+    p {
+      color: #222222;
+      margin-bottom: 16px;
+    }
+
+    .bold-text {
+      color: #004aad;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    #logo {
+      width: 165px;
+      user-select: none;
+    }
+
+    .navegacao ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 32px;
+    }
+
+    .navegacao ul li a {
+      color: #fff;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .navegacao ul li:not(:last-child) a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+      transition: 0.4s ease-in-out;
+    }
+
+    .navegacao ul li a:hover::after {
+      width: 100%;
+    }
+
+    .navegacao li .botao-login {
+      background-color: #ffffff52;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 500;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 32px;
+      transition: 0.4s ease-in-out;
+    }
+
+    .navegacao li .botao-login:hover {
+      box-shadow: rgba(255, 255, 255, 0.377) 0px 8px 32px;
+    }
+
+    main {
+      width: 100%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .secao {
+      margin: 32px 0;
+    }
+
+    .data {
+      color: #004aad;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 40px;
+    }
+
+    footer {
+      color: #fff;
+      text-align: center;
+      padding: 24px 0;
+    }
+
+    /* Menu hambúrguer */
+
+    .hamburguer {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+      z-index: 1000;
+      position: absolute;
+      top: 59px;
+      right: 40px;
+    }
+
+    .hamburguer span {
+      display: block;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: 0.3s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .our-panel {
+        padding-left: 48px;
+        padding-right: 48px;
+        padding-bottom: 24px;
+      }
+
+      .navegacao {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 65%;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+        z-index: 999;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+
+      .navegacao ul {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .navegacao.active {
+        right: 20px;
+      }
+
+      .menu {
+        justify-content: space-between;
+      }
+
+      .hamburguer {
+        display: flex;
+      }
+
+      .hamburguer.open {
+        position: fixed;
+        top: 59px;
+        right: 40px;
+      }
+
+      .hamburguer.open span {
+        background-color: #004aad;
+      }
+
+      .hamburguer.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburguer.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburguer.open span:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+
+      .navegacao ul {
+        margin-top: 130px;
+      }
+
+      .navegacao ul li a {
+        font-size: 18px;
+        padding: 8px 0;
+        color: #004aad;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .navegacao ul li a.botao-login {
+        margin-top: 32px;
+        color: #fff;
+        background-color: #004bad;
+      }
+
+      .menu {
+        margin-left: 32px;
+      }
+
+      main .container {
+        max-width: 80%;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      footer {
+        padding: 40px 0;
+        max-width: 80%;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container menu">
+      <img src="images/logo.png" alt="Logo SpotHub" id="logo" />
+      <nav class="navegacao">
+        <ul>
+          <li><a href="index.html">Voltar</a></li>
+          <li><a href="#" class="botao-login">Login</a></li>
+        </ul>
+      </nav>
+      <div class="hamburguer" id="hamburguer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div>
+        <h1>Declaração de Privacidade - SpotHub</h1>
+        <p>Bem-vindo ao SpotHub. Esta Declaração de Privacidade estabelece como o SpotHub protege, armazena e trata as
+          informações dos usuários que utilizam nossa plataforma.</p>
+      </div>
+
+      <div class="secao">
+        <h2>1. Sobre o SpotHub</h2>
+        <p>O SpotHub integra agências de publicidade e veículos de mídia, como emissoras de rádio e TV, facilitando o
+          processo de envio, recebimento e tratamento de Pedidos de Inserção (PIs) e materiais publicitários por meio de
+          inteligência artificial.</p>
+        <h3>1.1 Tipos de Usuários</h3>
+        <p>Existem três tipos de usuários na plataforma SpotHub:</p>
+        <p><span class="bold-text">• Agência:</span> responsável pelo envio de PIs e materiais publicitários.</p>
+        <p><span class="bold-text">• Veículo:</span> emissora de rádio ou TV que recebe o PI e processa as informações
+          para execução da veiculação.</p>
+        <p><span class="bold-text">• Integração:</span> software de operações comerciais (OPEC) que coleta dados do
+          SpotHub para integração com o veículo de mídia.</p>
+      </div>
+
+      <div class="secao">
+        <h2>2. Coleta e Tratamento de Dados</h2>
+        <p>O SpotHub processa dados como informações de cadastro, PIs, materiais publicitários e contatos entre agências
+          e veículos. Os dados são tratados exclusivamente para facilitar o fluxo de trabalho entre as partes.</p>
+        <h3>2.1 Finalidade do Tratamento</h3>
+        <p>O SpotHub utiliza os dados para:</p>
+        <p><span class="bold-text">• Processar e gerenciar Pedidos de Inserção e materiais publicitários.</span></p>
+        <p><span class="bold-text">• Facilitar a comunicação entre agências e veículos de mídia.</span></p>
+        <p><span class="bold-text">• Garantir a segurança e integridade dos dados conforme esta Declaração de
+            Privacidade.</span></p>
+        <p>O SpotHub não utiliza os dados para nenhuma outra finalidade além da prestação de serviços.</p>
+        <h3>2.2 Acesso Restrito e Controle de Usuários</h3>
+        <p>Somente os seguintes usuários têm acesso aos dados:</p>
+        <p><span class="bold-text">• Agência responsável:</span> acesso aos PIs e materiais publicitários enviados.</p>
+        <p><span class="bold-text">• Veículo:</span> acesso aos PIs e materiais designados para veiculação.</p>
+        <p><span class="bold-text">• Integração:</span> acesso aos dados integrados no sistema comercial do veículo.</p>
+        <p>Cada agência e veículo pode qualificar os usuários autorizados a visualizar e editar informações, usando
+          opções disponíveis no portal.</p>
+      </div>
+
+      <div class="secao">
+        <h2>3. Segurança e Proteção de Dados</h2>
+        <p>O SpotHub protege os dados de seus usuários contra acesso não autorizado, perda, alteração ou divulgação
+          indevida, seguindo as práticas abaixo:</p>
+        <p><span class="bold-text">• Criptografia de dados:</span> todos os dados são criptografados em trânsito e em
+          repouso.</p>
+        <p><span class="bold-text">• Acesso Controlado:</span> apenas usuários autenticados e autorizados têm acesso aos
+          dados.</p>
+        <p><span class="bold-text">• Auditoria e Monitoramento:</span> auditorias periódicas e monitoramento contínuo
+          são realizados para assegurar a conformidade.</p>
+      </div>
+
+      <div class="secao">
+        <h2>4. Armazenamento de Dados e Conformidade com a LGPD</h2>
+        <p>O SpotHub cumpre a Lei Geral de Proteção de Dados Pessoais (LGPD), mantendo os dados armazenados de forma
+          segura e em conformidade com a legislação vigente.</p>
+        <h3>4.1 Direitos dos Titulares</h3>
+        <p>Os usuários do SpotHub têm o direito de:</p>
+        <p><span class="bold-text">• Acessar e Retificar:</span> visualizar e solicitar correções de informações.</p>
+        <p><span class="bold-text">• Revogar ou Solicitar Exclusão:</span> solicitar a exclusão dos dados, respeitando
+          os prazos legais de retenção.
+        </p>
+      </div>
+
+      <div class="secao">
+        <h2>5. Compartilhamento de Dados</h2>
+        <p>O SpotHub não compartilha os dados dos usuários com terceiros fora do circuito de comunicação definido. O
+          compartilhamento de dados ocorre apenas entre agências, veículos e licenciados, ou quando exigido por lei.</p>
+      </div>
+
+      <div class="secao">
+        <h2>6. Atualizações da Declaração de Privacidade</h2>
+        <p>O SpotHub se reserva o direito de atualizar esta Declaração de Privacidade periodicamente. Recomendamos que
+          os usuários revisem esta página regularmente para estarem informados sobre eventuais mudanças.</p>
+      </div>
+
+      <div class="secao">
+        <h2>7. Contato</h2>
+        <p>Para mais informações ou dúvidas sobre esta Declaração de Privacidade, entre em contato conosco pelo e-mail
+          <a href="mailto:contato@spothub.com.br" target="_blank" class="bold-text">contato@spothub.com.br</a> ou pelo
+          telefone <a href="tel:+5511933461305" class="bold-text">(11) 93346-1305</a>.
+        </p>
+      </div>
+
+      <p class="data">Última atualização: 03/04/2025</p>
+    </div>
+  </main>
+  <footer>
+    <span>© 2025 SpotHub. Todos os direitos reservados.</span>
+  </footer>
+</body>
+
+</html>
