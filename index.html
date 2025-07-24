@@ -10,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <!-- Images by Freepik - https://www.freepik.com/ -->
-  <title>Document</title>
+  <title>SpotHub - Automação para Agências de Publicidade e Veículos de Comunicação</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <style>
     /* Globais */
 
@@ -63,12 +64,14 @@
 
     .o-que-oferecemos h2,
     .plataforma h2,
-    #motivos h2 {
+    #motivos h2,
+    #videos h2 {
       padding-bottom: 16px;
     }
 
     .o-que-oferecemos h2,
-    #motivos h2 {
+    #motivos h2,
+    #videos h2 {
       border-bottom: 3px solid #fff;
     }
 
@@ -445,6 +448,47 @@
       height: 640px;
     }
 
+    /* Seção "Vídeos" */
+
+    #videos {
+      padding-top: 56px;
+      width: 100%;
+    }
+
+    #videos h2 {
+      margin-bottom: 56px;
+    }
+
+    #videos .videos {
+      display: flex;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    #videos iframe {
+      background-color: #fff;
+      padding: 8px;
+      border-radius: 16px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    /* Seção "Nossos links" */
+
+    #links {
+      padding: 56px 0;
+      width: 100%;
+    }
+
+    #links a {
+      background-color: #fff;
+      color: #004aad;
+      font-size: 32px;
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      border-radius: 16px;
+    }
+
     /* Seção "7 motivos para escolher o SpotHub" */
 
     #motivos {
@@ -531,7 +575,7 @@
       flex-direction: column;
       width: 100%;
       padding: 56px 0;
-      background: linear-gradient(180deg, rgba(0, 74, 173, 1) 0%, rgba(41, 103, 186, 1) 45%, rgba(255, 255, 255, 0.9) 100%);
+      background: linear-gradient(180deg, rgba(0, 74, 173, 1) 0%, rgba(41, 103, 186, 1) 30%, rgba(255, 255, 255, 0.9) 80%);
     }
 
     .card-contato {
@@ -571,6 +615,43 @@
       margin-top: 24px;
       color: #004aad;
       text-decoration: underline;
+    }
+
+    /* WhatsApp */
+
+    .whatsapp-logo {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background-color: #31ba45;
+      padding: 12px 12px 8px 12px;
+      border-radius: 50%;
+      animation: shake-animation 9s infinite;
+    }
+
+    .whatsapp-logo img {
+      width: 35px;
+    }
+
+    @keyframes shake-animation {
+
+      0%,
+      22.22% {
+        transform: translateY(0);
+        /* Ponto inicial e final da animação */
+      }
+
+      5%,
+      15% {
+        transform: translateY(-6px);
+        /* Movimenta rapidamente para a esquerda */
+      }
+
+      10%,
+      20% {
+        transform: translateY(6px);
+        /* Movimenta rapidamente para a direita */
+      }
     }
 
     @media (max-width: 320px) and (max-width: 375px) {
@@ -657,7 +738,9 @@
       #motivos .container,
       .o-que-sao-pis,
       #contato .container,
-      .o-que-oferecemos {
+      .o-que-oferecemos,
+      #videos,
+      #links {
         width: 80%;
       }
 
@@ -667,7 +750,8 @@
       .titulo-com-imagem,
       .lista-motivos li,
       .o-que-sao-pis .container,
-      .card-contato {
+      .card-contato,
+      .videos {
         flex-wrap: wrap;
       }
 
@@ -675,6 +759,10 @@
       .perfis-fluxo h2,
       #motivos h2 {
         font-size: 34px;
+      }
+
+      #links a {
+        font-size: 24px;
       }
 
       .hero {
@@ -969,10 +1057,12 @@
             </div>
             <div class="card-perfil">
               <div><img src="images/media2.jpg" alt="Agência de publicidade">
-                <h3>Veículos de Mídia</h3>
+                <h3>Veículos de Mídia e Softwares de Cabine</h3>
                 <p>Rádios, TVs, jornais e plataformas digitais se beneficiam com a integração automatizada de pedidos de
                   inserção nos mais diversos softwares utilizados por elas. O SpotHub facilita o recebimento, a
-                  validação e o agendamento das campanhas, otimizando o fluxo entre OPEC e sistemas de veiculação.
+                  validação e o agendamento das campanhas, otimizando o fluxo entre OPEC e sistemas de veiculação. Para
+                  os softwares de cabine, o SpotHub oferece integração, garantindo que todos os PIs sejam recebidos e
+                  processados de forma eficiente.</p>
                 </p>
               </div>
             </div>
@@ -984,6 +1074,27 @@
         </section>
       </div>
     </div>
+    <section id="videos" class="centralize">
+      <div class="container">
+        <h2>Vídeos</h2>
+        <div class="videos">
+          <iframe width="645" height="350" src="https://www.youtube.com/embed/7kKdYDw6Xcs?si=yL6-0RVDGV3XEWHn"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="645" height="350" src="https://www.youtube.com/embed/XqqTKP3tPJ0?si=YHC5gqXE-AeIw1cY"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="links" class="centralize">
+      <div class="container">
+        <a href="https://bio.link/spothub" target="_blank">🔗 Conheça nossos links (PDF explicativo, redes sociais
+          e contatos)</a>
+      </div>
+    </section>
     <section id="motivos" class="centralize">
       <div class="container">
         <div class="titulo-com-imagem">
@@ -1069,11 +1180,13 @@
           <div>
             <h2>Contato</h2>
             <p>Tem alguma dúvida? Entre em contato conosco! Nosso time está 100% preparado para ajudá-lo sempre que
-              precisar. É só mandar uma mensagem para <a href="mailto:pi@spothub.com.br">pi@spothub.com.br</a> ou para o
+              precisar. É só mandar uma mensagem para <a href="mailto:contato@spothub.com.br">contato@spothub.com.br</a>
+              ou para o
               nosso número, <a href="tel:+5511933461305">(11) 93346-1305</a>, que te
               retornaremos o mais rápido possível. Você também pode clicar no ícone do WhatsApp no canto inferior
               direito
-              para ser diretamente levado à uma conversa com nossos profissionais.
+              para ser diretamente levado à uma conversa com nossos profissionais. Conheça também nosso PDF explicativo,
+              redes sociais e mais <a href="https://bio.link/spothub" target="_blank">clicando aqui.</a>
             </p>
           </div>
           <img src="images/bot4.png" alt="Mascote SpotHub">
@@ -1081,25 +1194,23 @@
       </div>
       <footer><span>© 2025 SpotHub. Todos os direitos reservados.</span><a href="eula.html">Política de Privacidade</a>
       </footer>
+      <a href="https://wa.me/+5511933461305/?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20SpotHub." target="_blank"
+        class="whatsapp-logo"><img src="images/whatsapp.png" alt="Fale conosco!"></a>
     </section>
   </main>
 
   <script>
-    // Espera o carregamento do conteúdo
     document.addEventListener('DOMContentLoaded', function () {
-      // Seleciona o botão
       const loginButton = document.querySelector('.botao-login');
 
-      // Adiciona o ouvinte de evento de clique no botão
       loginButton.addEventListener('click', function () {
-        // Verifica a URL atual
         const currentUrl = window.location.href;
 
-        // Se a URL contiver "hom", redireciona para o URL "hom.spothub"
         if (currentUrl.includes("hom")) {
           window.location.href = "https://hom.spothub.com.br/login.aspx";
+        } else if (currentUrl.includes("dev")) {
+          window.location.href = "https://dev.spothub.com.br/login.aspx";
         } else {
-          // Caso contrário, redireciona para o URL padrão
           window.location.href = "https://spothub.com.br/login.aspx";
         }
       });
